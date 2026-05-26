@@ -2,19 +2,6 @@ import java.util.Arrays;
 public class Level1{
 
 
-    public static void main(String[] args){
-
-//        int[] arr = {45, 3, 0, 45, 3,9};
-//        
-//        System.out.println(Arrays.toString(arrayInverter(arr)));
-//
-//        int number = 5;
-//        int root = (int)Math.sqrt(number);
-//        int result = root * root 
-//        System.out.println(root);
-//
-    }
-
 //    Helper method
     public static int evenArrCount(int[] arr){
 
