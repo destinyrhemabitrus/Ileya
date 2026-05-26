@@ -15,9 +15,7 @@ public class Level1{
             }
 
         }
-
         return count;
-
     }
 
 
@@ -34,9 +32,7 @@ public class Level1{
             }
 
         }
-
         return count;
-
     }
 
 
@@ -69,9 +65,7 @@ public class Level1{
             }
 
         }
- 
         return splitted;
-
     }
 
 
@@ -129,17 +123,12 @@ public class Level1{
             root = (int)Math.sqrt(arr[counter]);
             
             if(root * root == arr[counter]){
-
                 output[index] = arr[counter];
                 index = index + 1;
-
             }
                 
         }
-
-
         return output;
-
     }
 
 //----------Question 4---------------
@@ -155,18 +144,14 @@ public class Level1{
 
                 arr[counter] = arr[counter];
                 
-
             }else{
 
                 arr[counter] = -1;                
                 
             }
-                
+       
         }
-
-
         return arr;
-
     }
 
 
