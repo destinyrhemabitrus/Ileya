@@ -3,10 +3,16 @@ public class Level1{
 
 
     public static void main(String[] args){
-        int[] arr = {45, 3, 0, 45, 3,9};
-        
-        System.out.println(Arrays.toString(arrayInverter(arr)));
 
+//        int[] arr = {45, 3, 0, 45, 3,9};
+//        
+//        System.out.println(Arrays.toString(arrayInverter(arr)));
+//
+//        int number = 5;
+//        int root = (int)Math.sqrt(number);
+//        int result = root * root 
+//        System.out.println(root);
+//
     }
 
 //    Helper method
@@ -109,6 +115,71 @@ public class Level1{
 
         int[] invertedArray = arrayInverter(arr);
         return Arrays.equals(invertedArray, arr);
+    }
+
+
+//---------Question 3----------
+
+    public static int[] perfectSquare(int[] arr){
+        int root;
+        int count = 0;
+        for(int counter = 0; counter < arr.length; counter++){
+        
+            root = (int)Math.sqrt(arr[counter]);
+            
+            if(root * root == arr[counter]){
+
+                count = count + 1;
+
+            }
+                
+        }
+    
+        int[] output = new int[count];
+        int index = 0;
+        for(int counter = 0; counter < arr.length; counter++){
+        
+            root = (int)Math.sqrt(arr[counter]);
+            
+            if(root * root == arr[counter]){
+
+                output[index] = arr[counter];
+                index = index + 1;
+
+            }
+                
+        }
+
+
+        return output;
+
+    }
+
+//----------Question 4---------------
+
+    public static int[] nonPerfectSqrArrayElementReplacer(int[] arr){
+    
+        int root;
+        for(int counter = 0; counter < arr.length; counter++){
+        
+            root = (int)Math.sqrt(arr[counter]);
+            
+            if(root * root == arr[counter]){
+
+                arr[counter] = arr[counter];
+                
+
+            }else{
+
+                arr[counter] = -1;                
+                
+            }
+                
+        }
+
+
+        return arr;
+
     }
 
 

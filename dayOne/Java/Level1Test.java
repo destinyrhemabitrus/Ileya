@@ -114,8 +114,52 @@ public class Level1Test{
         boolean actual = Level1.parlindromeChecker(arr);
         org.junit.jupiter.api.Assertions.assertFalse(actual);
 
+    }
+
+
+//---------Question 3 perfectSquare computer-----
+    @org.junit.jupiter.api.Test
+    public void Test_That_perfectSquareMethod_Exists(){
+
+        int[] arr = {45, 0, 8, 0, 45};
+        Level1.perfectSquare(arr);
 
     }
+
+
+    @org.junit.jupiter.api.Test
+    public void Test_perfectSquareMethod_WithArrayOFPerfectAndNonPerfectSquareElements_ReturnsArrayOfPerfectSquareElements(){
+
+        int[] arr = {4, 7, 9, 10, 16, 18, 49};
+        int[] actual = Level1.perfectSquare(arr);
+        int[] expected = {4,9,16,49};
+        org.junit.jupiter.api.Assertions.assertArrayEquals(expected,actual);
+
+    }
+
+
+//-----------Question 4--------------------nonPerfectSqrArrayElementReplacer
+
+    @org.junit.jupiter.api.Test
+    public void Test_That_nonPerfectSqrArrayElementReplacerMethod_Exists(){
+
+        int[] arr = {4, 7, 9, 10, 49, 6};
+        Level1.nonPerfectSqrArrayElementReplacer(arr);
+
+    }
+
+
+    @org.junit.jupiter.api.Test
+    public void Test_nonPerfectSqrArrayElementReplacerMethod_ReturnsArrayWithNonPerfectSquareElementReplacesByNegativeOne(){
+
+        int[] arr = {3,4, 7, 9, 10, 49, 6,25};
+        int[] actual = Level1.nonPerfectSqrArrayElementReplacer(arr);
+        int[] expected = {-1,4,-1,9,-1,49,-1,25};
+        org.junit.jupiter.api.Assertions.assertArrayEquals(expected,actual);
+
+    }
+
+
 
 
 }
