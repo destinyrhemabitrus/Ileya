@@ -13,7 +13,6 @@ public class BookSuggestionSystem{
         int count = 0;
         int option = 0;
         do{
-            count = count + 1;
             System.out.printf("Welcome to the Book Suggestion System!%n1. Get Suggestions%n2. Add Book%n3. Remove Book%n4. Update book%n5. Show all books%n");
             option = inputCollector.nextInt();
             System.out.println();
@@ -107,7 +106,7 @@ public class BookSuggestionSystem{
                     
             return "Book removed succesfully!";
         }
-        return "Book isn't in library'";
+        return "Book isn't in library";
     }
 
 
