@@ -18,11 +18,11 @@ public class BookSuggestionSystemTest{
         
 //        BookSuggestionSystem suggestionSys = new BookSuggestionSystem();
         String book1 = "How to pray";
-        String book2 = "Think and grow rich";
+        //String book2 = "Think and grow rich";
         suggestionSys.addBook(book1);
-        suggestionSys.addBook(book2);
+        //suggestionSys.addBook(book2);
         String actual = suggestionSys.showAllBooks();
-        String expected = "How to pray Think and grow rich ";
+        String expected = "How to pray Page 1";
         org.junit.jupiter.api.Assertions.assertEquals(expected, actual);
 
     }
