@@ -52,13 +52,13 @@ public class StudentGradeManager{
         }
        
 
-        System.out.println("============================================================================================");
+        System.out.println("==================================================================================================");
         System.out.printf("%-16s","STUDENT");        
         for(int counter = 0; counter < grades[0].length; counter++){
             System.out.printf("%s%-9d","SUB",counter + 1);        
         }
         System.out.printf("%-12s%-12s%-12s%n","TOTAL","AVE","POS");
-        System.out.println("============================================================================================");
+        System.out.println("==================================================================================================");
 
         for(int counter = 0; counter < grades.length; counter++){
             double count = 0;
@@ -67,19 +67,18 @@ public class StudentGradeManager{
             System.out.printf("Student %-8d",counter + 1);        
             for(int counterTwo = 0; counterTwo < grades[counter].length; counterTwo++){
 
-                if(counterTwo < studentTotal.length){
-
-                    if(studentTotal[counterTwo] > studentTotal[counter]){
-
-                        position = position + 1;
-
-                    }
-
-                }
                 System.out.printf("%-12d",grades[counter][counterTwo]);
                 count = count + 1.0;
                 total = total + grades[counter][counterTwo];
         
+            }
+//            position Ranking
+            for(int counterThree = 0; counterThree < studentTotal.length; counterThree++){
+
+                if(studentTotal[counterThree] > studentTotal[counter]){
+                    position = position + 1;
+                }
+            
             }
             System.out.printf("%-12d",total);
             System.out.printf("%-12.2f",(total/count));
